@@ -70,12 +70,15 @@
       <div class="d-flex position-relative w-100">
 
         <!-- Brand-->
-        <a class="navbar-brand" href="#" style="color: white;">Alida</a>
+        <a class="navbar-brand" href="#">Alida</a>
         <ul class="navbar-nav-desctop mr-auto d-none d-lg-block">
-          <li><a class="nav-link" href="#home" style="color: white;">Home</a></li>
-          <li><a class="nav-link" href="#about" style="color: white;">About</a></li>
-          <li><a class="nav-link" href="#Education" style="color: white;">Education</a></li>
+          <li><a class="nav-link" href="#home" >Home</a></li>
+          <li><a class="nav-link" href="#about" >About</a></li>
+          <li><a class="nav-link" href="#skills" >Skill</a></li>
+          <li><a class="nav-link" href="#experience" style="color: white;">Experience</a></li>
+          <li><a class="nav-link" href="#Education" >Education</a></li>
           <li><a class="nav-link" href="#projects" style="color: white;">Projects</a></li>
+          <li><a class="nav-link" href="#contact" style="color: white;">contact</a></li>
           <!--<li><a class="nav-link" href="#testimonials" style="color: white;">Testimonials</a></li>-->
         </ul>
 
@@ -109,16 +112,44 @@
       </ul>
 
       <ul class="navbar-nav navbar-nav-mobile">
-        <li><a class="nav-link" href="#home">Home</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="Education">Education</a></li>
-        <li><a class="nav-link" href="#projects">Projects</a></li>
+         <li><a class="nav-link" href="#home" >Home</a></li>
+          <li><a class="nav-link" href="#about" >About</a></li>
+          <li><a class="nav-link" href="#skills" >Skill</a></li>
+          <li><a class="nav-link" href="#experience" style="color: white;">Experience</a></li>
+          <li><a class="nav-link" href="#Education" >Education</a></li>
+          <li><a class="nav-link" href="#projects" style="color: white;">Projects</a></li>
+          <li><a class="nav-link" href="#contact" style="color: white;">contact</a></li>
         <!--<li><a class="nav-link" href="#testimonials">Testimonials</a></li>-->
        </ul>
        <div class="navbar-mobile-footer">
         <p>© 2020 Alida. All Rights Reserved.</p>
        </div>
     </nav>
+<script>
+  function isSectionInView(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (!section) return false;
+    const rect = section.getBoundingClientRect();
+    return rect.top <= 100 && rect.bottom >= 100;
+  }
+
+  function updateNavbarBackground() {
+    const navbar = document.querySelector('.navbar-desctop');
+
+    // If you're in home or about, keep navbar transparent
+    if (isSectionInView('#home') || isSectionInView('#about')) {
+      navbar.classList.remove('navbar-scrolled');
+    } else {
+      navbar.classList.add('navbar-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', updateNavbarBackground);
+  window.addEventListener('load', updateNavbarBackground);
+</script>
+
+
+
 
     <!-- Masthead -->  
     <main id="home" class="masthead jarallax" style="background-image:url('img/bg/DSC08253(1).jpg');" role="main">
@@ -158,84 +189,110 @@
       }
   </style>
 
-
-  <section id="about" class="section bg-white" style="padding-top: 2rem; padding-bottom: 2rem;">
+<!-- About Section -->
+<!-- About Section -->
+<section id="about" class="section pb-0">
   <div class="container">
     <h2 data-aos="fade-up" class="mb-4 text-center" style="color:#0c4a48; font-weight: 700;">
-      About Me & Technical Skills
+      About Me
     </h2>
-    <div class="row align-items-start">
-      <!-- About Text -->
-      <div class="col-md-6 mb-4" data-aos="fade-up" style="font-size:1rem; color:#2f4f4f; line-height:1.5;">
-        Hello, I'm Alida Anna Thomas, a passionate software developer with a Master’s degree in Computer Applications (MCA). I completed my MCA at Nirmala College, Muvattupuzha, following my bachelor's degree from St. George College, Aruvithura. I am enthusiastic about leveraging my skills in software development, database management, and problem-solving to contribute to innovative technology projects.
-      </div>
-
-      <!-- Skills Compact -->
-      <div class="col-md-6" data-aos="fade-in" data-aos-delay="50">
-        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-          <!-- Skill row -->
-          <div class="skill-row">
-            <span class="skill-name">Python</span>
-            <div class="bar-container"><div class="bar" style="width: 80%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Java</span>
-            <div class="bar-container"><div class="bar" style="width: 55%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">C</span>
-            <div class="bar-container"><div class="bar" style="width: 65%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">JavaScript</span>
-            <div class="bar-container"><div class="bar" style="width: 40%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Bash (Shell Scripting)</span>
-            <div class="bar-container"><div class="bar" style="width: 55%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">HTML</span>
-            <div class="bar-container"><div class="bar" style="width: 80%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">CSS</span>
-            <div class="bar-container"><div class="bar" style="width: 75%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Django (Backend)</span>
-            <div class="bar-container"><div class="bar" style="width: 70%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">PHP</span>
-            <div class="bar-container"><div class="bar" style="width: 80%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Flutter</span>
-            <div class="bar-container"><div class="bar" style="width: 25%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">MySQL</span>
-            <div class="bar-container"><div class="bar" style="width: 70%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">PostgreSQL</span>
-            <div class="bar-container"><div class="bar" style="width: 50%;"></div></div>
-          </div>
-          <div class="skill-row">
-            <span class="skill-name">Git & GitHub</span>
-            <div class="bar-container"><div class="bar" style="width: 70%;"></div></div>
-          </div>
-          <div class="skill-row" style="margin-top: 1rem;">
-            <strong>Languages:</strong> English, Malayalam, Hindi
-          </div>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" style="font-size:1rem; color:#2f4f4f; line-height:1.6;">
+        <p>
+          Hello, I'm <strong>Alida Anna Thomas</strong>, a passionate software developer with a Master’s degree in Computer Applications (MCA). I completed my MCA at <strong>Nirmala College, Muvattupuzha</strong> and my bachelor's degree at <strong>St. George College, Aruvithura</strong>.
+          I'm deeply interested in software development, database design, and real-world application building. I look forward to contributing to innovative projects and growing as a developer.
+        </p>
       </div>
     </div>
   </div>
 </section>
+<section id="skills" class="section bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up" style="color: #0c4a48; font-weight: 700; font-size: 2.5rem;">
+      Technical Skills
+    </h2>
+    <div class="skills-grid text-center" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Skill Items -->
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
+        <p class="skill-name">Python</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+        <p class="skill-name">Java</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" />
+        <p class="skill-name">C</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <p class="skill-name">JavaScript</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" />
+        <p class="skill-name">Linux</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg" alt="PHP" />
+        <p class="skill-name">PHP</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" />
+        <p class="skill-name">Flutter</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+        <p class="skill-name">HTML</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+        <p class="skill-name">CSS</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django" />
+        <p class="skill-name">Django</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" />
+        <p class="skill-name">MySQL</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+        <p class="skill-name">PostgreSQL</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+        <p class="skill-name">Git</p>
+      </div>
+
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" />
+        <p class="skill-name">GitHub</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 <!-- Experience Section -->
-<section id="experience" class="py-5 bg-light">
+<section id="experience" class="section pb-0">
   <div class="container">
     <div class="section-title">
       <h2 class="text-center mb-5">Experience</h2>
@@ -278,7 +335,7 @@
 
 
 
-<section id="Education" class="section pb-0">
+<section id="Education" class="section bg-light py-5">
   <div class="container">
       <div class="row align-items-end">
           <div class="col-md-6" data-aos="fade-up">
@@ -324,153 +381,125 @@
       </div>
   </div>
 </section>
-
-<section id="projects" class="py-5 bg-light">
-  <div class="container" style="position: relative;">
-    <div class="row align-items-center mb-4">
-      <div class="col-md-6" data-aos="fade-up">
-        <h2 class="section-title">Featured Projects</h2>
-      </div>
-      <div class="col-md-6 text-md-right" style="position: relative;">
-        <div class="arrow-buttons">
-          <button class="prev-btn" aria-label="Previous Project">‹</button>
-          <button class="next-btn" aria-label="Next Project">›</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-project owl-carousel d-flex align-items-center" data-aos="fade-in">
-      <div class="project-item">
-        <a href="#project1" class="popup-with-zoom-anim project-card">
-          <h3>Incident Reporting System</h3>
-          <span class="underline"></span>
-        </a>
-      </div>
-      <div class="project-item">
-        <a href="#project2" class="popup-with-zoom-anim project-card">
-          <h3>Task Management System</h3>
-          <span class="underline"></span>
-        </a>
-      </div>
-      <div class="project-item">
-        <a href="#project3" class="popup-with-zoom-anim project-card">
-          <h3>Doctor Appointment System</h3>
-          <span class="underline"></span>
-        </a>
-      </div>
-       <div class="project-item">
-        <a href="#project4" class="popup-with-zoom-anim project-card">
-          <h3>Agromart</h3>
-          <span class="underline"></span>
-        </a>
-      </div>
-      <div class="project-item">
-        <a href="#project5" class="popup-with-zoom-anim project-card">
-          <h3>Bank Management System</h3>
-          <span class="underline"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Modal contents -->
- <div id="project1" class="mfp-hide zoom-anim-dialog">
-  <h2>Incident Reporting System</h2>
-  <div class="project-details">
-    <h6>About:</h6>
-    <span>This is a web-based system developed as part of my internship at <strong>Ainsurtech</strong>. It allows users to report workplace incidents, track statuses, and engage in internal/public communication for effective resolution. It includes modules for status tracking, dynamic form handling, threaded commenting, and email notifications.</span>
-  </div>
-</div>
-<div id="project2" class="mfp-hide zoom-anim-dialog">
-  <h2>Task Management System</h2>
-  <div class="project-details">
-    <h6>About:</h6>
-    <span>This live project was developed during my internship at <strong>GKS Infotech</strong>. It is a full-stack web app that allows companies to create, assign, and manage tasks and milestones across teams. It includes features like CSV/Excel exports, comment threads, and REST API integration.</span>
-  </div>
-</div>
-<div id="project3" class="mfp-hide zoom-anim-dialog">
-  <h2>Doctor Appointment System</h2>
-  <div class="project-details">
-    <h6>About:</h6>
-    <span>An online platform where patients can view doctor availability, book appointments, receive confirmations, and manage their medical visit schedules. This project was developed independently to improve patient-clinic interactions through digital booking.</span>
-  </div>
-
-</div>
-<div id="project4" class="mfp-hide zoom-anim-dialog">
-  <h2>AgroMart</h2>
-  <div class="project-details">
-    <h6>About:</h6>
-    <span>AgroMart is a platform where people can sell their homegrown or homemade products to other people.</span>
-  </div>
-</div>
-
-<div id="project5" class="mfp-hide zoom-anim-dialog">
-  <h2>Bank Management System</h2>
-  <div class="project-details">
-    <h6>About:</h6>
-    <span>The bank management system project in C enables users to create accounts, deposit and withdraw money, and view account details.</span>
-  </div>
-</div>
-  <section id="Certificates" class="section py-5" style="background: #f9fafb;">
+<!-- Projects Section -->
+<!-- Projects Section -->
+<section id="projects" class="section pb-0">
   <div class="container">
-    <div class="row justify-content-center mb-6">
-      <div class="col-lg-8 text-center" data-aos="fade-up">
-        <h2 class="fw-bold mb-3" style="color: #0c4a48;">Certificates & Internships</h2>
-        <p class="text-muted mb-4" style="font-size: 1.1rem;">My key certifications and live project internships.</p>
-      </div>
-    </div>
+    <h2 class="text-center mb-5" style="color: #0c4a48;">Featured Projects</h2>
+    <div class="row g-4 justify-content-center">
 
-    <div class="row gx-4 gy-6 mb-6">
-      <!-- Certificate Card Template -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up">
-        <div class="certificate-card" style="margin-bottom: 40px;">
-          <div class="certificate-header">
-            <h5>Internship - Incident Reporting System</h5>
-            <small class="text-secondary">Ainsurtech</small>
+      <!-- Incident Reporting System -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card position-relative overflow-hidden">
+          <img src="img/bg/incident.png" class="img-fluid" alt="Incident Reporting System">
+          <div class="project-overlay">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#project1">More Details</button>
           </div>
-          <p class="certificate-desc">Worked on Incident Reporting System as part of internship at Ainsurtech.</p>
-          <a href="img/bg/ainsurtech_certificate.jpg" target="_blank" class="view-link">View Certificate</a>
         </div>
+        <h5 class="text-center mt-2" style="color: #0c4a48;">Incident Reporting System</h5>
       </div>
 
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="certificate-card">
-          <div class="certificate-header">
-            <h5>Internship - Task Management System</h5>
-            <small class="text-secondary">GKS Infotech (Live Project)</small>
+      <!-- Task Management System -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card position-relative overflow-hidden">
+          <img src="img/bg/task.png" class="img-fluid" alt="Task Management System">
+          <div class="project-overlay">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#project2">More Details</button>
           </div>
-          <p class="certificate-desc">Developed Task Management System using Django and React.js.</p>
-          <a href="img/bg/gks_certificate.jpg" target="_blank" class="view-link">View Certificate</a>
         </div>
+        <h5 class="text-center mt-2" style="color: #0c4a48;">Task Management System</h5>
       </div>
 
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="certificate-card">
-          <div class="certificate-header">
-            <h5>Workshop - PHP Programming</h5>
-            <small class="text-secondary">One-day Workshop at CET</small>
+      <!-- Doctor Appointment System -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card position-relative overflow-hidden">
+          <img src="img/bg/doctor.png" class="img-fluid" alt="Doctor Appointment System">
+          <div class="project-overlay">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#project3">More Details</button>
           </div>
-          <p class="certificate-desc">Hands-on experience in PHP fundamentals and applications.</p>
-          <a href="img/bg/WhatsApp Image 2024-07-21 at 11.44.52 PM.jpeg" target="_blank" class="view-link">View Certificate</a>
         </div>
+        <h5 class="text-center mt-2" style="color: #0c4a48;">Doctor Appointment System</h5>
       </div>
 
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="certificate-card">
-          <div class="certificate-header">
-            <h5>NPTEL Certification</h5>
-            <small class="text-secondary">Problem Solving Through C Programming</small>
+      <!-- AgroMart -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card position-relative overflow-hidden">
+          <img src="img/bg/agromart.png" class="img-fluid" alt="AgroMart">
+          <div class="project-overlay">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#project4">More Details</button>
           </div>
-          <p class="certificate-desc">Completed the online certification on problem solving with C.</p>
-          <a href="mooc certificate alida.pdf" target="_blank" class="view-link">View Certificate</a>
         </div>
+        <h5 class="text-center mt-2" style="color: #0c4a48;">AgroMart</h5>
       </div>
+
+      <!-- Bank Management System -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card position-relative overflow-hidden">
+          <img src="img/bg/bank.png" class="img-fluid" alt="Bank Management System">
+          <div class="project-overlay">
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#project5">More Details</button>
+          </div>
+        </div>
+        <h5 class="text-center mt-2" style="color: #0c4a48;">Bank Management System</h5>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section id="contact" class="py-5 bg-white">
+<!-- Modals -->
+<div class="modal fade" id="project1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-4 rounded-4 shadow-lg border-0">
+      <button type="button" class="btn-close position-absolute top-3 end-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h3 class="mb-3" style="color:#0c4a48;">Incident Reporting System</h3>
+      <p>This is a web-based system developed as part of my internship at <strong>Ainsurtech</strong>. It allows users to report workplace incidents, track statuses, and engage in internal/public communication for effective resolution. It includes modules for status tracking, dynamic form handling, threaded commenting, and email notifications.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-4 rounded-4 shadow-lg border-0">
+      <button type="button" class="btn-close position-absolute top-3 end-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h3 class="mb-3" style="color:#0c4a48;">Task Management System</h3>
+      <p>This live project was developed during my internship at <strong>GKS Infotech</strong>. It is a full-stack web app that allows companies to create, assign, and manage tasks and milestones across teams. It includes features like CSV/Excel exports, comment threads, and REST API integration.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-4 rounded-4 shadow-lg border-0">
+      <button type="button" class="btn-close position-absolute top-3 end-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h3 class="mb-3" style="color:#0c4a48;">Doctor Appointment System</h3>
+      <p>An online platform where patients can view doctor availability, book appointments, receive confirmations, and manage their medical visit schedules. This project was developed independently to improve patient-clinic interactions through digital booking.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-4 rounded-4 shadow-lg border-0">
+      <button type="button" class="btn-close position-absolute top-3 end-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h3 class="mb-3" style="color:#0c4a48;">AgroMart</h3>
+      <p>AgroMart is a PHP-based platform where users can list and sell homemade or homegrown products. It provides a simple product listing interface with user registration and order tracking.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project5" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-4 rounded-4 shadow-lg border-0">
+      <button type="button" class="btn-close position-absolute top-3 end-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h3 class="mb-3" style="color:#0c4a48;">Bank Management System</h3>
+      <p>The Bank Management System developed in C allows users to create accounts, deposit and withdraw money, and view account details. It’s a console-based system demonstrating structured programming concepts.</p>
+    </div>
+  </div>
+</div>
+
+
+<section id="contact" class="section bg-light py-5">
   <div class="container">
     <div class="section-title text-center mb-5">
       <h2>Contact Me</h2>
@@ -653,6 +682,8 @@
 <script src="js/aos.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/interface.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 <script>
